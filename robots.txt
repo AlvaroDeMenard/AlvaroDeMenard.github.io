@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+
+User-agent: ia_archiver
+Disallow: /about/
+
+Sitemap: https://fantasticanachronism.com/sitemap.xml

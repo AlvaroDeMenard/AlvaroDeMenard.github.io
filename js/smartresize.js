@@ -1,0 +1,1 @@
+!function($,sr){jQuery.fn[sr]=function(fn){return fn?this.bind("resize",function(func,threshold,execAsap){var timeout;return function(){var obj=this,args=arguments;timeout?clearTimeout(timeout):execAsap&&func.apply(obj,args),timeout=setTimeout(function(){execAsap||func.apply(obj,args),timeout=null},threshold||100)}}(fn)):this.trigger(sr)}}(jQuery,"smartresize");
