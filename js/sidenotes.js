@@ -1,12 +1,12 @@
 /* sidenotesjs: standalone JS library for parsing HTML documents with Pandoc-style footnotes and dynamically repositioning them into the left/right margins, when browser windows are wide enough.
 Sidenotes (see https://www.gwern.net/Sidenotes ) are superior to footnotes where possible because they enable the reader to immediately look at them without requiring user action to 'go to' or 'pop up' the footnotes; even floating footnotes require effort by the reader.
-sidenotesjs is inspired by the Tufte-CSS sidenotes (https://edwardtufte.github.io/tufte-css/#sidenotes), but where Tufte-CSS uses static footnotes inlined into the body of the page (requiring modifications to Pandoc's compilation), which doesn't always work well for particularly long or frequent sidenotes, sidenotes.js will rearrange sidenotes to fit as best as possible, and will respond to window changes.
+sidenotesjs is inspired by the Tufte-CSS sidenotes (https://edwardtufte.github.io/tufte-css/#sidenotes), but where Tufte-CSS uses static footnotes inlined into the body of the page (requiring modifications to Pandoc's compilation), which doesn't always work well for particularly long or frequent sidenotes, sidenotesjs will rearrange sidenotes to fit as best as possible, and will respond to window changes.
 Particularly long sidenotes are also partially 'collapsed'.
 Styling (especially for oversized-sidenotes which must scroll) is done in /static/css/default.css "SIDENOTES" section.
 
 Author: Said Achmiz
 2019-03-11
-license: MIT (derivative of footnotes.js, which is PD)
+license: MIT (derivative of footnotesjs, which is PD)
 */
 
 
