@@ -1,0 +1,1 @@
+$(".collapsebtn").click(function(){return $($(this).attr("href")).toggle(0,function(){}),$(this).text().startsWith("Show")?$(this).html('Hide Details <i class="fa fa-angle-up">'):$(this).html('Show Details <i class="fa fa-angle-down">'),!1});
