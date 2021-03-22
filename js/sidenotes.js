@@ -334,7 +334,7 @@ function updateSidenotesInCollapseBlocks() {
         //  Otherwise, move the sidenote back into the correct sidenote column.
 		
 
-        let side = (fnref.getBoundingClientRect().top + scrollTop) < 1600 ? GW.sidenotes.sidenoteColumnLeft : ((i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight);
+        let side = (fnref.getBoundingClientRect().top + scrollTop) < 1900 ? GW.sidenotes.sidenoteColumnLeft : ((i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight);
         //  What's the next sidenote?
         var nextSidenoteIndex =  i + 2;
         while (nextSidenoteIndex < GW.sidenotes.footnoteRefs.length &&
@@ -489,7 +489,7 @@ function updateSidenotePositions() {
             continue;
 		
 		//  What side is this sidenote on?
-        let side = GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top < 1600 ? GW.sidenotes.sidenoteColumnLeft : ((i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight);
+        let side = GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top < 1900 ? GW.sidenotes.sidenoteColumnLeft : ((i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight);
 		
 		//  Default position (vertically aligned with the footnote reference).
         sidenote.style.top = Math.round(((GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top) - side.getBoundingClientRect().top) + 4) + "px";
@@ -536,13 +536,13 @@ function updateSidenotePositions() {
         if (sidenote.parentElement == GW.sidenotes.hiddenSidenoteStorage) continue;
 
         //  What side is this sidenote on?
-        let side = sidenote.offsetTop < 1500 ? GW.sidenotes.sidenoteColumnLeft :  ((i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight);
+        let side = sidenote.offsetTop < 1900 ? GW.sidenotes.sidenoteColumnLeft :  ((i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight);
 
         /*  What points bound the vertical region within which this sidenote may
             be placed?
             */
         let room = {
-            ceiling:    side == GW.sidenotes.sidenoteColumnLeft ? 0 : 1350,
+            ceiling:    side == GW.sidenotes.sidenoteColumnLeft ? 0 : 1900,
             floor:      side.clientHeight
         };
         let sidenoteFootprint = {
